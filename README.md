@@ -109,7 +109,29 @@ This was built as a learning project / portfolio piece, not for production use a
 
 ## Screenshots
 
-_(added manually)_
+<table>
+  <tr>
+    <td align="center">
+      <img width="400" alt="Login page" src="https://github.com/user-attachments/assets/af49f9e6-0dec-4cc0-929c-c99a50978688" /><br/>
+      <sub>Login</sub>
+    </td>
+    <td align="center">
+      <img width="400" alt="Proxy hosts list" src="https://github.com/user-attachments/assets/2e30584f-7e73-448d-9acf-31d74feaab6e" /><br/>
+      <sub>Proxy hosts list</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="400" alt="Add host form" src="https://github.com/user-attachments/assets/0816a1d1-6ec8-46f6-aa86-c4e8d9970c8e" /><br/>
+      <sub>Adding a host</sub>
+    </td>
+    <td align="center">
+      <img width="400" alt="Edit host form" src="https://github.com/user-attachments/assets/3d27ced1-f097-49e9-90fd-2cac98b46119" /><br/>
+      <sub>Editing a host</sub>
+    </td>
+  </tr>
+</table>
+
 
 ## License
 
