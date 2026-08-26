@@ -9,4 +9,8 @@ import com.proxymanager.domain.ProxyHost;
 public interface ProxyHostRepository extends JpaRepository<ProxyHost, Long> {
 
     List<ProxyHost> findByActivTrue();
+
+    boolean existsByDomeniu(String domeniu);
+
+    boolean existsByDomeniuAndIdNot(String domeniu, Long id);
 }
