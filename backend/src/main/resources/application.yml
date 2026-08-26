@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: proxy-manager
+  datasource:
+    url: jdbc:postgresql://localhost:5434/proxy_manager
+    username: proxy_manager
+    password: proxy_manager
+  jpa:
+    hibernate:
+      # update: Hibernate creates/updates tables automatically from the entities.
+      # Convenient for learning; a real project would use migrations (Flyway/Liquibase) instead.
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoint:
+    gateway:
+      # the gateway endpoint is disabled by default (enableByDefault = false in the
+      # Spring Cloud Gateway source), so exposing it below isn't enough - it must be enabled explicitly
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        # exposes POST /actuator/gateway/refresh - useful for Phase 1, to manually trigger
+        # a RefreshRoutesEvent before we have the Admin API (Phase 2)
+        include: gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
