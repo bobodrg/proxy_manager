@@ -31,3 +31,16 @@ management:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
+
+app:
+  jwt:
+    # HS256 needs a secret of at least 256 bits: this one is a randomly generated
+    # base64 value, fine for local dev/portfolio use. A real deployment would load
+    # this from an environment variable or a secrets manager instead of committing it.
+    secret: n327QFgidzUhMLgpaXRF3WgS2zxqf5ZA77gzGMFfe74=
+    expiration-minutes: 60
+  admin:
+    # used once by AdminUserSeeder to create the first admin user if app_user is empty.
+    # Change this (or override via env var) before deploying anywhere but localhost.
+    default-username: admin
+    default-password: admin123
