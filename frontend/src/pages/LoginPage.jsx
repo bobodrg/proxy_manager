@@ -26,29 +26,35 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="centered-page">
-      <form className="card" onSubmit={handleSubmit}>
-        <h1>Proxy Manager</h1>
+    <div className="auth-page">
+      <form className="card auth-card" onSubmit={handleSubmit}>
+        <div className="auth-brand">
+          <span className="brand-mark">PM</span>
+          <h1>Proxy Manager</h1>
+        </div>
+        <p className="auth-subtitle">Sign in to manage your proxy hosts</p>
         {error && <p className="error">{error}</p>}
-        <label>
-          Username
+        <div className="field">
+          <label htmlFor="username">Username</label>
           <input
+            id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             autoFocus
             required
           />
-        </label>
-        <label>
-          Password
+        </div>
+        <div className="field">
+          <label htmlFor="password">Password</label>
           <input
+            id="password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        </label>
-        <button type="submit" disabled={submitting}>
+        </div>
+        <button type="submit" className="btn btn-primary" disabled={submitting}>
           {submitting ? 'Signing in...' : 'Sign in'}
         </button>
       </form>

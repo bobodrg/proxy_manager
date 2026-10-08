@@ -43,39 +43,52 @@ export default function HostsPage() {
   }
 
   return (
-    <div className="page">
-      <header className="page-header">
-        <h1>Proxy Hosts</h1>
-        <button type="button" onClick={logout}>
-          Log out
-        </button>
+    <div>
+      <header className="app-header">
+        <div className="app-header-inner">
+          <div className="app-brand">
+            <span className="brand-mark">PM</span>
+            <h1>Proxy Manager</h1>
+          </div>
+          <button type="button" className="btn btn-ghost" onClick={logout}>
+            Log out
+          </button>
+        </div>
       </header>
 
-      {error && <p className="error">{error}</p>}
+      <div className="page-container">
+        <div className="page-toolbar">
+          <div>
+            <h2>Proxy Hosts</h2>
+            <p className="page-subtitle">Domains routed through this gateway and where they point to.</p>
+          </div>
+          {formTarget === null && (
+            <button type="button" className="btn btn-primary" onClick={() => setFormTarget('new')}>
+              + Add host
+            </button>
+          )}
+        </div>
 
-      {formTarget === null && (
-        <button type="button" onClick={() => setFormTarget('new')}>
-          Add host
-        </button>
-      )}
+        {error && <p className="error">{error}</p>}
 
-      {formTarget === 'new' && (
-        <HostForm onSubmit={handleCreate} onCancel={() => setFormTarget(null)} />
-      )}
+        {formTarget === 'new' && (
+          <HostForm onSubmit={handleCreate} onCancel={() => setFormTarget(null)} />
+        )}
 
-      {formTarget && formTarget !== 'new' && (
-        <HostForm
-          initialValue={formTarget}
-          onSubmit={handleUpdate}
-          onCancel={() => setFormTarget(null)}
-        />
-      )}
+        {formTarget && formTarget !== 'new' && (
+          <HostForm
+            initialValue={formTarget}
+            onSubmit={handleUpdate}
+            onCancel={() => setFormTarget(null)}
+          />
+        )}
 
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <HostsTable hosts={hosts} onEdit={setFormTarget} onDelete={handleDelete} />
-      )}
+        {loading ? (
+          <p className="page-subtitle">Loading...</p>
+        ) : (
+          <HostsTable hosts={hosts} onEdit={setFormTarget} onDelete={handleDelete} />
+        )}
+      </div>
     </div>
   )
 }
