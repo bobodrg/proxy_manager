@@ -112,21 +112,25 @@ This was built as a learning project / portfolio piece, not for production use a
 <table>
   <tr>
     <td align="center">
-      <img width="400" alt="Login page" src="https://github.com/user-attachments/assets/af49f9e6-0dec-4cc0-929c-c99a50978688" /><br/>
+      <img width="400" height="260" alt="Login form" src="https://github.com/user-attachments/assets/6a7350cd-3d5f-45f1-84d4-89879576954c" />
+      <br/>
       <sub>Login</sub>
     </td>
     <td align="center">
-      <img width="400" alt="Proxy hosts list" src="https://github.com/user-attachments/assets/2e30584f-7e73-448d-9acf-31d74feaab6e" /><br/>
+      <img width="400" height="260" alt="Proxy hosts list" src="https://github.com/user-attachments/assets/91e3c8f5-da90-4e74-900d-640fcfeaabc8" />
+      <br/>
       <sub>Proxy hosts list</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img width="400" alt="Add host form" src="https://github.com/user-attachments/assets/0816a1d1-6ec8-46f6-aa86-c4e8d9970c8e" /><br/>
+      <img width="400" height="260" alt="Add host form" src="https://github.com/user-attachments/assets/9abe0fb0-203f-4841-bba6-a3ea099f85ce" />
+      <br/>
       <sub>Adding a host</sub>
     </td>
     <td align="center">
-      <img width="400" alt="Edit host form" src="https://github.com/user-attachments/assets/3d27ced1-f097-49e9-90fd-2cac98b46119" /><br/>
+      <img width="400" height="260" alt="Edit host form" src="https://github.com/user-attachments/assets/6f910478-7577-4184-b96d-df4ade9903a5" />
+      <br/>
       <sub>Editing a host</sub>
     </td>
   </tr>
